@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Pallavi 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         BACKGROUND
+    ================================= -->
+
+    <div class="background">
+
+        <div class="moon"></div>
+
+        <div class="bubbles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="stars">
+            <i>✦</i>
+            <i>✧</i>
+            <i>✦</i>
+            <i>·</i>
+            <i>✧</i>
+            <i>✦</i>
+            <i>·</i>
+            <i>✧</i>
+            <i>✦</i>
+        </div>
+
+        <span class="heart">♥</span>
+        <span class="heart">♡</span>
+        <span class="heart">♥</span>
+        <span class="heart">♡</span>
+
+        <span class="star">✦</span>
+        <span class="star">✧</span>
+        <span class="star">✦</span>
+        <span class="star">✧</span>
+
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+
+    </div>
+
+
+    <!-- ================================
+         MUSIC
+    ================================= -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" onclick="toggleMusic()">
+        🎵
+    </button>
+
+
+    <!-- ================================
+         FIRST PAGE
+    ================================= -->
+
+    <div class="container">
+
+        <p class="small-text">
+            Hey Pallavi... 👀
+        </p>
+
+        <h1>
+            I made something for you 🎁
+        </h1>
+
+        <p class="subtitle">
+            Since you're one of my best friends,<br>
+            you deserve a little surprise.
+        </p>
+
+        <button id="surpriseBtn" onclick="showSurprise()">
+            Open Your Surprise ✨
+        </button>
+
+    </div>
+
+
+    <!-- ================================
+         SURPRISE / PAGE 2
+    ================================= -->
+
+    <div id="surprise" class="surprise">
+
+        <!-- Floating balloons -->
+
+        <div class="balloon balloon1">🎈</div>
+        <div class="balloon balloon2">🎈</div>
+        <div class="balloon balloon3">🎈</div>
+        <div class="balloon balloon4">🎈</div>
+
+
+        <!-- Celebration sparkles -->
+
+        <div class="celebration-sparkles">
+
+            <span>✦</span>
+            <span>✧</span>
+            <span>✨</span>
+            <span>✦</span>
+            <span>✧</span>
+            <span>✨</span>
+
+        </div>
+
+
+        <!-- Confetti -->
+
+        <div class="confetti">
+
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+
+        </div>
+
+
+        <!-- Main Surprise Card -->
+
+        <div class="surprise-card">
+
+            <div class="birthday-crown">
+                👑
+            </div>
+
+
+            <!-- Main photo -->
+
+            <div class="memory-photo">
+
+                <img
+                    src="images/pallavi.jpeg"
+                    alt="Pallavi"
+                >
+
+            </div>
+
+
+            <!-- Memory Gallery -->
+
+            <div class="memory-gallery">
+
+                <button
+                    class="gallery-arrow"
+                    onclick="previousPhoto()"
+                >
+                    ‹
+                </button>
+
+
+                <div class="gallery-frame">
+
+                    <img
+                        id="galleryImage"
+                        src="images/memory2.png"
+                        alt="Birthday memory"
+                    >
+
+                    <div id="galleryCaption">
+                        A beautiful memory 💕
+                    </div>
+
+                    <div id="gallerySparkles"></div>
+
+                </div>
+
+
+                <button
+                    class="gallery-arrow"
+                    onclick="nextPhoto()"
+                >
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="big-heart">
+                💗
+            </div>
+
+
+            <div class="mini-title">
+                TODAY IS YOUR DAY ✨
+            </div>
+
+
+            <h2>
+                Happy Birthday,<br>
+                Pallavi! 🎂
+            </h2>
+
+
+            <p class="personal-message">
+
+                Today is all about celebrating you. ✨
+                <br><br>
+
+                I hope this year brings you countless
+                reasons to smile, beautiful memories,
+                and everything you've been wishing for. 💕
+                <br><br>
+
+                Stay exactly the wonderful person you are.
+                Happy Birthday once again, Pallavi! 🎂
+
+            </p>
+
+
+            <div class="cake">
+                🎂
+            </div>
+
+
+            <!-- Wish -->
+
+            <div
+                class="birthday-message"
+                id="wishButton"
+                onclick="makeWish()"
+            >
+                ✨ Make a wish ✨
+            </div>
+
+
+            <!-- Final message -->
+
+            <div
+                id="finalMessage"
+                class="final-message"
+            >
+
+                <span>💫</span>
+
+                <p>
+                    Here's to another beautiful year<br>
+                    full of memories, laughter & happiness. 💕
+                </p>
+
+                <small>
+                    — Happy Birthday, Pallavi ✨
+                </small>
+
+            </div>
+
+
+            <div id="celebration"></div>
+
+
+            <!-- PAGE 3 BUTTON -->
+
+            <button
+                class="next-page-button"
+                onclick="openNotePage()"
+            >
+                A Little Note For You 💌
+            </button>
+
+
+            <!-- Back to beginning -->
+
+            <button onclick="closeSurprise()">
+                Back to the beginning 💕
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         PAGE 3 — PERSONAL NOTE
+    ================================= -->
+
+    <section class="page note-page" id="page3">
+
+        <div class="note-card">
+
+            <div class="note-top">
+                <span>✦</span>
+                <span>♡</span>
+                <span>✦</span>
+            </div>
+
+            <h1>A Little Note For You</h1>
+
+            <p class="note-subtitle">
+                Something I really wanted to tell you...
+            </p>
+
+
+            <!-- =========================
+                 PART 1
+            ========================== -->
+
+            <div class="letter-part active" id="letterPart1">
+
+                <div class="note-photos">
+
+                    <img
+                        src="images/note1.jpeg"
+                        alt="Pallavi"
+                    >
+
+                    <img
+                        src="images/note2.jpeg"
+                        alt="Pallavi"
+                    >
+
+                </div>
+
+
+                <div class="note-content">
+
+                    <p>
+                        Hey, finally, it’s your birthday! 🥳🎉🎉
+                    </p>
+
+                    <p>
+                        So, Happy Birthday Pallavi, meri kuchu puchu 🫠❤️
+                    </p>
+
+                    <p>
+                        Mujhe pata nahi jab tum yeh padh rahi hogi toh tumhara
+                        mood kaisa hoga, but I really wish ki aaj ke din at
+                        least tum happy feel karo aur kuch khush raho. 🥹
+                    </p>
+
+                    <p>
+                        I am really grateful to have you in my life. And honestly,
+                        tum actually bohot matter karti ho mere liye.
+                    </p>
+
+                    <p>
+                        You know, you are one of the very few people jinki
+                        personality mujhe genuinely pasand hai. Like, ek time
+                        pe mai apke jaisa hi tha but pata nahi kab aur kaise
+                        main badal gaya. 😭
+                        isilye i love how you are and thoughts bhi kafi milte hai
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="next-page-button"
+                    onclick="showLetterPart2()"
+                >
+                    Continue Reading → 💌
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 PART 2
+            ========================== -->
+
+            <div class="letter-part" id="letterPart2">
+
+                <div class="note-content">
+
+                    <p>
+                        I really hope ki tum abhi jaisi ho, waise hi hamesha raho.
+                        Kabhi mat badalna. You are a very genuine person, so please
+                        kabhi dusron ke liye khud ko mat badalna. 🤧
+                    </p>
+
+                    <p>
+                        And you are very kind too, especially un logon ke saath
+                        jo tumhare close hain.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Haan, bas mujhe thoda kam ignore kara karo na. 😭
+                        </strong>
+                        <br>
+                        Abhi dekho, main tumhare liye kuch gift bhi order nahi
+                        kar paya. 🥲
+                    </p>
+
+                    <p>
+                        And… I am really sorry for whatever happened recently.
+                    </p>
+
+                    <p>
+                        I know tumhe hurt hua hoga, and I really am sorry for that.
+                        I’ll genuinely try ki aage se aisa na ho. 🥲
+                    </p>
+
+                    <p>
+                        Main yeh nahi keh raha ki aisa hona chahiye, but
+                        kabhi-kabhi cheezein ho jaati hain na.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Iska yeh matlab toh nahi hai ki main tumse baat karna
+                            hi band kar dunga. ❤️
+                        </strong>
+                    </p>
+
+                    <p>
+                        And I really hope and pray ki tumhe
+                        <strong>
+                            everything and every success that you deserve
+                        </strong>
+                        mile.
+                    </p>
+
+                    <p>
+                        For how kind you are, you really deserve
+                        <strong>
+                            a lot & lots of love and care.
+                        </strong>
+                        🥹🥹
+                    </p>
+
+                    <p>
+                        And promise yrr, I’ll always care for you and try my best
+                        to be there for you.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="next-page-button"
+                    onclick="openPage4()"
+                >
+                    Continue → ✨
+                </button>
+
+            </div>
+
+
+            <div class="note-bottom">
+                ✧･ﾟ: *✧･ﾟ:* 　　 *:･ﾟ✧*:･ﾟ✧
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 4
+    ================================= -->
+
+    <section class="note-page" id="page4">
+
+        <div class="note-card">
+
+            <div class="note-top">
+                ✦ &nbsp; ♡ &nbsp; ✦
+            </div>
+
+            <h1>One Last Thing...</h1>
+
+            <p class="note-subtitle">
+                Before this little letter ends...
+            </p>
+
+
+            <div class="note-content">
+
+                <p>
+                    Yrr, sach mein bohot bura lag raha hai ki hum saath mein
+                    celebrate nahi kar pa rahe. I really wish ki aaj main tumhare
+                    saath hota, ya at least tumhare liye kuch aisa kar pata jo
+                    tumhara day thoda aur special bana pata.
+                </p>
+
+                <p>
+                    But koi nahi…
+                </p>
+
+                <p>
+                    Jab main earn karunga na, tab exactly waise karunga jaise
+                    main abhi imagine kar raha hoon. 😭❤️
+                </p>
+
+                <p>
+                    Aur waise bhi…
+                </p>
+
+                <p>
+                    100 years toh mere saath hi birthday manoge 😅😅
+                </p>
+
+                <p>
+                    So for now, this is your day.
+                </p>
+
+                <p>
+                    Enjoy it however you want. 🥳❤️
+                </p>
+
+                <p>
+                    And once again…
+                </p>
+
+                <p>
+                    Happy Birthday, Pallavi. 🎂❤️
+                </p>
+
+                <p>
+                    I hope this year gives you countless reasons to smile,
+                    lots of beautiful memories, and everything you've been
+                    wishing for.
+                </p>
+
+                <p>
+                    Stay exactly the way you are. 🫠❤️
+                </p>
+
+            </div>
+
+
+            <div class="note-signature">
+                — Karish
+            </div>
+
+
+            <!-- BACK TO PAGE 3 -->
+
+            <button
+                class="next-page-button"
+                onclick="backToPage3()"
+            >
+                ← Back to the letter
+            </button>
+
+
+            <!-- GO TO PAGE 5 -->
+
+            <button
+                class="next-page-button"
+                onclick="openPage5()"
+            >
+                Continue to the memories → 📸
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 5 — LITTLE MOMENTS
+    ===================================================== -->
+
+    <section class="memory-page" id="page5">
+
+        <div class="memory-heading">
+
+            <div class="memory-stars">
+                ✦ &nbsp; ♡ &nbsp; ✦
+            </div>
+
+            <h1>
+                Little Moments
+            </h1>
+
+            <p>
+                Some memories are small,<br>
+                but they mean the world to me.
+            </p>
+
+        </div>
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="memory-item memory-photo photo-one">
+
+            <div class="tape pink-tape"></div>
+
+            <img
+                src="media/photo1.jpeg"
+                alt="Memory 1"
+            >
+
+            <span>
+                a little moment ♡
+            </span>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="memory-item memory-photo photo-two">
+
+            <div class="pin purple-pin"></div>
+
+            <img
+                src="media/photo2.jpeg"
+                alt="Memory 2"
+            >
+
+            <span>
+                always a memory ♡
+            </span>
+
+        </div>
+
+
+        <!-- VIDEO -->
+
+        <div class="memory-item memory-video video-one">
+
+            <div class="pin gold-pin"></div>
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="media/memory-video.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video.
+
+            </video>
+
+            <span>
+                one of my favorite moments ♡
+            </span>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="memory-item memory-photo photo-three">
+
+            <div class="tape blue-tape"></div>
+
+            <img
+                src="media/photo3.jpeg"
+                alt="Memory 3"
+            >
+
+            <span>
+                you + me ♡
+            </span>
+
+        </div>
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="memory-item memory-photo photo-four">
+
+            <div class="pin pink-pin"></div>
+
+            <img
+                src="media/photo4.jpeg"
+                alt="Memory 4"
+            >
+
+            <span>
+                another little memory ♡
+            </span>
+
+        </div>
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="memory-item memory-photo photo-five">
+
+            <img
+                src="media/photo5.jpeg"
+                alt="Memory 5"
+            >
+
+            <span>
+                one more ♡
+            </span>
+
+        </div>
+
+
+        <!-- PHOTO 6 -->
+
+        <div class="memory-item memory-photo photo-six">
+
+            <img
+                src="media/photo6.jpeg"
+                alt="Memory 6"
+            >
+
+            <span>
+                and another ♡
+            </span>
+
+        </div>
+
+
+        <!-- BACK TO PAGE 4 -->
+
+        <button
+            class="memory-back"
+            onclick="backToPage4()"
+        >
+            ← Back to Page 4
+        </button>
+
+
+        <!-- NEXT PAGE -->
+
+        <button
+            class="memory-next"
+            onclick="openPage6()"
+        >
+            More to come →
+        </button>
+
+    </section>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+
+        /* =================================
+           SURPRISE PAGE
+        ================================= */
+
+        function showSurprise() {
+
+            document
+                .getElementById("surprise")
+                .classList.add("show");
+
+            const music =
+                document.getElementById("birthdayMusic");
+
+            const musicButton =
+                document.getElementById("musicButton");
+
+            music.play().then(() => {
+
+                musicButton.innerHTML = "🎶";
+
+                musicButton.classList.add("playing");
+
+            }).catch(() => {
+
+                /*
+                    Browser blocked autoplay.
+                    User can press music button.
+                */
+
+            });
+
+        }
+
+
+        function closeSurprise() {
+
+            document
+                .getElementById("surprise")
+                .classList.remove("show");
+
+        }
+
+
+        /* =================================
+           PAGE 3
+        ================================= */
+
+        function openNotePage() {
+
+            document
+                .getElementById("page3")
+                .classList.add("show");
+
+        }
+
+
+        function showLetterPart2() {
+
+            const part1 =
+                document.getElementById("letterPart1");
+
+            const part2 =
+                document.getElementById("letterPart2");
+
+
+            if (part1) {
+
+                part1.classList.remove("active");
+
+            }
+
+
+            if (part2) {
+
+                part2.classList.add("active");
+
+            }
+
+        }
+
+
+        /* =================================
+           PAGE 4
+        ================================= */
+
+        function openPage4() {
+
+            const page3 =
+                document.getElementById("page3");
+
+            const page4 =
+                document.getElementById("page4");
+
+
+            if (page3) {
+
+                page3.classList.remove("show");
+
+            }
+
+
+            if (page4) {
+
+                page4.classList.add("show");
+
+            }
+
+        }
+
+
+        function backToPage3() {
+
+            const page4 =
+                document.getElementById("page4");
+
+            const page3 =
+                document.getElementById("page3");
+
+            const part1 =
+                document.getElementById("letterPart1");
+
+            const part2 =
+                document.getElementById("letterPart2");
+
+
+            if (page4) {
+
+                page4.classList.remove("show");
+
+            }
+
+
+            if (page3) {
+
+                page3.classList.add("show");
+
+            }
+
+
+            /* Reset Page 3 */
+
+            if (part2) {
+
+                part2.classList.remove("active");
+
+            }
+
+
+            if (part1) {
+
+                part1.classList.add("active");
+
+            }
+
+        }
+
+
+        function closeNotePage() {
+
+            document
+                .getElementById("page3")
+                .classList.remove("show");
+
+        }
+
+
+        /* =================================
+           PAGE 5
+        ================================= */
+
+        function openPage5() {
+
+            const page4 =
+                document.getElementById("page4");
+
+            const page5 =
+                document.getElementById("page5");
+
+
+            if (page4) {
+
+                page4.classList.remove("show");
+
+            }
+
+
+            if (page5) {
+
+                page5.classList.add("show");
+
+            }
+
+        }
+
+
+        function backToPage4() {
+
+            const page5 =
+                document.getElementById("page5");
+
+            const page4 =
+                document.getElementById("page4");
+
+
+            if (page5) {
+
+                page5.classList.remove("show");
+
+            }
+
+
+            if (page4) {
+
+                page4.classList.add("show");
+
+            }
+
+        }
+
+
+        /* =================================
+           PAGE 6
+        ================================= */
+
+        function openPage6() {
+
+            /*
+                Page 6 will be added next.
+                For now this keeps the button ready
+                without breaking the website.
+            */
+
+            console.log("Page 6 coming next!");
+
+        }
+
+
+        /* =================================
+           MAKE A WISH
+        ================================= */
+
+        function makeWish() {
+
+            const celebration =
+                document.getElementById("celebration");
+
+            const wishButton =
+                document.getElementById("wishButton");
+
+            const finalMessage =
+                document.getElementById("finalMessage");
+
+
+            finalMessage.classList.add("show");
+
+
+            wishButton.innerHTML =
+                "✨ Wish Made! ✨";
+
+            wishButton.classList.add("wish-made");
+
+
+            /* Confetti */
+
+            const colors = [
+
+                "#ffd76a",
+                "#ffb6d9",
+                "#c9b8ff",
+                "#ffe7a3",
+                "#ffc6e3",
+                "#ffffff"
+
+            ];
+
+
+            for (let i = 0; i < 80; i++) {
+
+                const piece =
+                    document.createElement("div");
+
+                piece.className =
+                    "celebration-piece";
+
+
+                piece.style.background =
+                    colors[
+                        Math.floor(
+                            Math.random() *
+                            colors.length
+                        )
+                    ];
+
+
+                piece.style.setProperty(
+                    "--x",
+                    `${(Math.random() - 0.5) * 100}vw`
+                );
+
+
+                piece.style.setProperty(
+                    "--y",
+                    `${(Math.random() - 0.5) * 100}vh`
+                );
+
+
+                piece.style.animationDelay =
+                    `${Math.random() * 0.5}s`;
+
+
+                celebration.appendChild(piece);
+
+            }
+
+
+            /* Fireworks */
+
+            const positions = [
+
+                [20, 25],
+                [50, 18],
+                [80, 28],
+                [30, 55],
+                [70, 52],
+                [50, 75]
+
+            ];
+
+
+            positions.forEach(
+                (position, index) => {
+
+                    setTimeout(() => {
+
+                        const firework =
+                            document.createElement("div");
+
+                        firework.className =
+                            "firework";
+
+
+                        firework.style.left =
+                            position[0] + "%";
+
+                        firework.style.top =
+                            position[1] + "%";
+
+
+                        celebration.appendChild(
+                            firework
+                        );
+
+
+                        setTimeout(() => {
+
+                            firework.remove();
+
+                        }, 1200);
+
+                    }, index * 250);
+
+                }
+            );
+
+
+            /* Remove old confetti */
+
+            setTimeout(() => {
+
+                celebration.innerHTML = "";
+
+            }, 4000);
+
+        }
+
+
+        /* =================================
+           MUSIC
+        ================================= */
+
+        function toggleMusic() {
+
+            const music =
+                document.getElementById(
+                    "birthdayMusic"
+                );
+
+            const button =
+                document.getElementById(
+                    "musicButton"
+                );
+
+
+            if (music.paused) {
+
+                music.play();
+
+                button.innerHTML = "🎶";
+
+                button.classList.add(
+                    "playing"
+                );
+
+            } else {
+
+                music.pause();
+
+                button.innerHTML = "🎵";
+
+                button.classList.remove(
+                    "playing"
+                );
+
+            }
+
+        }
+
+
+        /* =================================
+           MEMORY GALLERY
+        ================================= */
+
+        const memories = [
+
+            {
+                image: "images/memory2.jpeg",
+                caption: "A beautiful memory 💕"
+            },
+
+            {
+                image: "images/memory3.jpeg",
+                caption: "Another moment worth remembering ✨"
+            },
+
+            {
+                image: "images/pallavi.jpeg",
+                caption: "The birthday girl herself 👑"
+            }
+
+        ];
+
+
+        let currentPhoto = 0;
+
+
+        function changePhoto(index) {
+
+            const image =
+                document.getElementById(
+                    "galleryImage"
+                );
+
+            const caption =
+                document.getElementById(
+                    "galleryCaption"
+                );
+
+            const frame =
+                document.querySelector(
+                    ".gallery-frame"
+                );
+
+
+            frame.classList.add(
+                "changing"
+            );
+
+
+            gallerySparkleBurst();
+
+
+            setTimeout(() => {
+
+                currentPhoto = index;
+
+
+                image.src =
+                    memories[
+                        currentPhoto
+                    ].image;
+
+
+                caption.textContent =
+                    memories[
+                        currentPhoto
+                    ].caption;
+
+
+                frame.classList.remove(
+                    "changing"
+                );
+
+            }, 300);
+
+        }
+
+
+        function nextPhoto() {
+
+            let next =
+                (currentPhoto + 1)
+                % memories.length;
+
+            changePhoto(next);
+
+        }
+
+
+        function previousPhoto() {
+
+            let previous =
+                (
+                    currentPhoto -
+                    1 +
+                    memories.length
+                )
+                % memories.length;
+
+            changePhoto(previous);
+
+        }
+
+
+        function gallerySparkleBurst() {
+
+            const container =
+                document.getElementById(
+                    "gallerySparkles"
+                );
+
+
+            if (!container) return;
+
+
+            const symbols = [
+
+                "✨",
+                "✦",
+                "💗",
+                "✧"
+
+            ];
+
+
+            for (let i = 0; i < 8; i++) {
+
+                const sparkle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                sparkle.className =
+                    "gallery-sparkle";
+
+
+                sparkle.textContent =
+                    symbols[
+                        Math.floor(
+                            Math.random() *
+                            symbols.length
+                        )
+                    ];
+
+
+                sparkle.style.left =
+                    "50%";
+
+                sparkle.style.top =
+                    "50%";
+
+
+                sparkle.style.setProperty(
+                    "--sparkle-x",
+                    `${(Math.random() - 0.5) * 250}px`
+                );
+
+
+                sparkle.style.setProperty(
+                    "--sparkle-y",
+                    `${(Math.random() - 0.5) * 180}px`
+                );
+
+
+                container.appendChild(
+                    sparkle
+                );
+
+
+                setTimeout(() => {
+
+                    sparkle.remove();
+
+                }, 1500);
+
+            }
+
+        }
+
+
+        /* =================================
+           MOBILE SWIPE
+        ================================= */
+
+        const galleryFrame =
+            document.querySelector(
+                ".gallery-frame"
+            );
+
+
+        let touchStartX = 0;
+
+        let touchEndX = 0;
+
+
+        if (galleryFrame) {
+
+            galleryFrame.addEventListener(
+                "touchstart",
+                function (e) {
+
+                    touchStartX =
+                        e.changedTouches[0]
+                            .screenX;
+
+                }
+            );
+
+
+            galleryFrame.addEventListener(
+                "touchend",
+                function (e) {
+
+                    touchEndX =
+                        e.changedTouches[0]
+                            .screenX;
+
+
+                    const difference =
+                        touchStartX -
+                        touchEndX;
+
+
+                    if (difference > 50) {
+
+                        nextPhoto();
+
+                    }
+
+
+                    if (difference < -50) {
+
+                        previousPhoto();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =================================
+           AUTO SLIDESHOW
+        ================================= */
+
+        let slideshowTimer;
+
+
+        function startMemorySlideshow() {
+
+            clearInterval(
+                slideshowTimer
+            );
+
+
+            slideshowTimer =
+                setInterval(() => {
+
+                    nextPhoto();
+
+                }, 5000);
+
+        }
+
+
+        const originalShowSurprise =
+            showSurprise;
+
+
+        showSurprise = function () {
+
+            originalShowSurprise();
+
+
+            setTimeout(() => {
+
+                startMemorySlideshow();
+
+            }, 1200);
+
+        };
+
+
+    </script>
+
+
+    <!-- ================================
+         EXTERNAL JAVASCRIPT
+    ================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
